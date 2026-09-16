@@ -1,5 +1,9 @@
 from fastapi import FastAPI
+
+
 from api.routes.search import router as search_router
+from api.routes.products import router as products_router
+
 
 
 
@@ -20,3 +24,6 @@ def health_check():
 
 
 app.include_router(search_router)
+app.include_router(products_router)
+
+
